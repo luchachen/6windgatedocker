@@ -1,0 +1,4 @@
+deb http://ppa.launchpadcontent.net/jonathonf/vim/ubuntu bionic main
+deb-src http://ppa.launchpadcontent.net/jonathonf/vim/ubuntu bionic main
+#deb http://apt.kitware.com/ubuntu/ bionic main
+#deb-src http://apt.kitware.com/ubuntu/ bionic main

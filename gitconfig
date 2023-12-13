@@ -1,0 +1,15 @@
+[user]
+	email = chunhuachen@ruijie.com.cn
+	name = chunhuachen
+#	name = ruijienetworks
+[color]
+	ui = auto
+#[url "https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/"]
+#    insteadOf =  ssh://git@zhjsyf.ruijie.com.cn:2223/scos/la/
+#[url "ssh://git@zhjsyf.ruijie.com.cn:2223/scos/la/"]
+#	insteadOf = ssh://kehuanyu@172.16.2.103:29418/vst_aml_android13_edla/
+[credential]
+	helper = store
+[http]
+	sslVersion = tlsv1.0
+	sslVerify = false

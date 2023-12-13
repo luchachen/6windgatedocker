@@ -21,6 +21,14 @@ ADD packages.ntos /root/
 
 RUN apt-cache dumpavail | dpkg --merge-avail \
     && dpkg --clear-selections && dpkg --set-selections < packages.ntos  && apt-get -y -u dselect-upgrade || echo "for manual"
+
+RUN apt install -y install man-db coreutils
+
+# add git bash_complete
+RUN apt install -y  --no-install-recommends --no-install-suggests  git-all
+
+# YouCompleteme
+RUN apt install -y python3.8-dev gcc-8 g++-8
 # sshd
 RUN mkdir /run/sshd; \
     apt install -y openssh-server; \

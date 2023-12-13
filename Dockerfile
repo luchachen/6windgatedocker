@@ -8,7 +8,7 @@ COPY vim.gpg trusted.gpg /etc/apt/trusted.gpg.d/
 COPY gitconfig /root/.gitconfig
 COPY vimrc /root/.vimrc
 COPY inputrc  /root/.inputrc
-COPY vim/ /root/.vim/
+#COPY vim/ /root/.vim/
 WORKDIR /bin/
 RUN ln -sf bash sh
 
@@ -20,7 +20,7 @@ WORKDIR /root/
 ADD packages.ntos /root/
 
 RUN apt-cache dumpavail | dpkg --merge-avail \
-    && dpkg --clear-selections && dpkg --set-selections < packages.ntos  && apt-get -y -u dselect-upgrade
+    && dpkg --clear-selections && dpkg --set-selections < packages.ntos  && apt-get -y -u dselect-upgrade || echo "for manual"
 # sshd
 RUN mkdir /run/sshd; \
     apt install -y openssh-server; \

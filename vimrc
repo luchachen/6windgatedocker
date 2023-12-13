@@ -146,5 +146,5 @@ let GtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
 "let cauthor = 'xxx'
 "
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python3.8'
 

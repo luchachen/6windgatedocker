@@ -22,7 +22,7 @@ ADD packages.ntos /root/
 RUN apt-cache dumpavail | dpkg --merge-avail \
     && dpkg --clear-selections && dpkg --set-selections < packages.ntos  && apt-get -y -u dselect-upgrade || echo "for manual"
 
-RUN apt install -y install man-db coreutils dos2unix cppcheck
+RUN apt install -y install man-db coreutils dos2unix cppcheck  bash-completion
 
 # add git bash_complete
 RUN apt install -y  --no-install-recommends --no-install-suggests  git-all
